@@ -5,16 +5,17 @@
 import numpy as np
 from scipy.integrate import odeint
 import matplotlib.pyplot as plt
+from math import log
 
 h = 0.1
-x0 = 0
+x0 = 2
 y0 = 1
 
 def method(y, x):
-    dydx = x**2 + y
+    dydx = -y + log(x)
     return dydx
 
-x_values = np.arange(x0, .5, h)
+x_values = np.arange(x0, 2.5, h)
 
 solution = odeint(method, y0, x_values)
 
@@ -30,7 +31,7 @@ for i in range(len(x_values)):
 ###----------------=----###
 
 def rkfmethod(x,y):
-    dydx = x**2 + y
+    dydx = -y + log(x)
     return dydx
 
 def k1method(x,y,h):
