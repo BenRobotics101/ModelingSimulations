@@ -1,10 +1,10 @@
 
 
 class RKF():
-    """_summary_
+    """A class that describes an ODE with initial values.
     """
     def __init__(self, function, x0 : float, y0 : float, h : float):
-        """_summary_
+        """Create RKF object to model the provided ODE
 
         Args:
             function (func): The function to solve. Must be in format: myFunction(y, x) -> float
@@ -61,7 +61,7 @@ class RKF():
         self.y = self.yIN
         return self
     
-    def __next__(self) -> tuple(float, float):
+    def __next__(self) -> (float, float):
         """Return the next point estimated.
 
         Returns:
