@@ -74,26 +74,28 @@ class RKF():
         self.y = y
         return x, y
 
-def functionIn(y : float, x : float) -> float:
-    """An example function passed in
+if __name__ == "__main__":
 
-    Args:
-        y (float): The y value in
-        x (float): The x value in
+    def functionIn(y : float, x : float) -> float:
+        """An example function passed in
 
-    Returns:
-        float: The value of the function
-    """
-    return x * x + y
+        Args:
+            y (float): The y value in
+            x (float): The x value in
 
-# The RKF object. Set up the initial x and y values. And h value
-rkf = RKF(functionIn, x0=0, y0=1, h=0.1)
+        Returns:
+            float: The value of the function
+        """
+        return x * x + y
 
-# Go through the first 100 points.
-limit = 100
-counter = 0
-for result in rkf:
-    print(f"X: {result[0]} Y: {result[1]}")
-    if(counter >= limit):
-        break
-    counter += 1
+    # The RKF object. Set up the initial x and y values. And h value
+    rkf = RKF(functionIn, x0=0, y0=1, h=0.1)
+
+    # Go through the first 100 points.
+    limit = 100
+    counter = 0
+    for result in rkf:
+        print(f"X: {result[0]} Y: {result[1]}")
+        if(counter >= limit):
+            break
+        counter += 1
