@@ -42,10 +42,10 @@ for i in range(len(arrX)):
 fig, ax = plt.subplots()
 
 # Plot the first set of data as a line
-ax.plot(x_values, y_values, label='Odeint')
+ax.plot(x_values, y_values, label='Odeint', linewidth=2.5, color="green")
 
 # Plot the second set of data as a line
-ax.plot(arrX, arrY, label='Runge-Kutta', linestyle='--')
+ax.plot(arrX, arrY, label='Runge-Kutta', linestyle=(0, (5, 4)), color="red", linewidth=2.5)
 
 # Add labels and a title
 ax.set_xlabel('X')
