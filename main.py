@@ -36,3 +36,10 @@ arrX, arrY = rkf.getArray(3500)
 
 for i in range(len(arrX)):
     print(f"X: {arrX[i]:.1f}, Y: {arrY[i]}")
+
+diff = []
+for i in range(len(arrX)):
+    diff.append(arrY[i] - y_values[i])
+    # print(f"X: {arrX[i]}, Diff: {diff}")
+
+print(max(diff))
