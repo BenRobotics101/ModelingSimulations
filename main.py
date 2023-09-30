@@ -37,9 +37,23 @@ arrX, arrY = rkf.getArray(3500)
 for i in range(len(arrX)):
     print(f"X: {arrX[i]:.1f}, Y: {arrY[i]}")
 
-diff = []
-for i in range(len(arrX)):
-    diff.append(arrY[i] - y_values[i])
-    # print(f"X: {arrX[i]}, Diff: {diff}")
 
-print(max(diff))
+# Create a figure and axis
+fig, ax = plt.subplots()
+
+# Plot the first set of data as a line
+ax.plot(x_values, y_values, label='Odeint')
+
+# Plot the second set of data as a line
+ax.plot(arrX, arrY, label='Runge-Kutta', linestyle='--')
+
+# Add labels and a title
+ax.set_xlabel('X')
+ax.set_ylabel('Y')
+ax.set_title("Runge-Kutta vs. Odeint for Solving ODE's")
+
+# Add a legend to differentiate between the two data sets
+ax.legend()
+
+# Display the plot
+plt.show()
