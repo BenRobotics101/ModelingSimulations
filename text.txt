@@ -1,9 +1,2 @@
-- Add code snippets + decriptions
-- Comment program throughly and add header comment
-- ReadMe
-- System Performance
-- Responsibilites/Completed Tasks
-- Add flowchart to Word Doc
 - Add everything to zip folder
 - Submit
-- Get food
