@@ -14,9 +14,6 @@
 # For the second equation, the solution is:
 # y = -4 * cos(x) + 4
 
-###----------------###
-### ODEINT Program ###
-###----------------###
 
 import numpy as np
 import matplotlib.pyplot as plt
