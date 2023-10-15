@@ -17,4 +17,4 @@
 	- Project3.py		// Code
     - Problem1.pdf      // solution pdf for equation 1
     - Problem2.pdf      // solution pdf for equation 2
-	- ReadMe.md		// ReadMe file
+	- README.md		// ReadMe file

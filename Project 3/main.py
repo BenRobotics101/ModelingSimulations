@@ -92,6 +92,7 @@ y_values2 = solution2(x_values)
 figure, axis = plt.subplots(2, 2) 
 figure.tight_layout(h_pad=4)
 
+# Graph the plots, starting with Equation 1.
 axis[0, 0].plot(x_values, fun1, label='y_h', linewidth=2.5, color="green")
 axis[0, 0].set_xlabel('X')
 axis[0, 0].set_ylabel('Y')
