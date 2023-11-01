@@ -14,7 +14,7 @@ import matplotlib.pyplot as plt
 h = 0.1
 x0 = 0
 
-MAX_X =30
+MAX_X = 150
 
 # Define the equations
 
@@ -51,26 +51,22 @@ fun1 = func(x_values)
 fun2 = func2(x_values)
 
 # Initialise the subplot function using number of rows and columns 
-figure, axis = plt.subplots(2, 1) 
-figure.subplots_adjust(hspace=0.5)
+figure, axis = plt.subplots() 
 # figure.tight_layout(h_pad=2)
 
 # Graph the plots, starting with Equation 1.
-axis[0].plot(x_values, fun1, label='EQ1', linewidth=2.5, color="green")
-axis[0].set_xlabel('t')
-axis[0].set_ylabel('Data')
-axis[0].legend()
-axis[0].set_ylim(0, 1)
-axis[0].set_xlim(0, 30)
-axis[0].set_title("Solution 1") 
+axis.plot(x_values, fun1, label='EQ1', linewidth=2.5, color="green")
+axis.plot(x_values, fun2, label='EQ2', linewidth=2.5, color="red")
+axis.set_xlabel('t')
+axis.set_ylabel('Data')
+axis.xaxis.grid(True, which='major')
+axis.yaxis.grid(True, which='major')
 
-axis[1].plot(x_values, fun2, label='EQ2', linewidth=2.5, color="green")
-axis[1].set_xlabel('t')
-axis[1].set_ylabel('Data')
-axis[1].legend()
-axis[1].set_ylim(-1, 0)
-axis[1].set_xlim(0, 30)
-axis[1].set_title("Solution 2") 
+axis.legend()
+axis.set_ylim(-1, 1)
+axis.set_xlim(0, 150)
+axis.set_title("Solutions") 
+
 
   
 # Combine all the operations and display 
