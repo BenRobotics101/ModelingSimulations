@@ -65,55 +65,93 @@ def main():
     ax.set_title(f"Lorenz Attractor: R={rVal}")
 
     def updateFrame(frame):
-        
-        rVal = frame + 3
+        rValcopy = frame + 3
         #print("Rval", rVal)
-        xs, ys, zs = graph(rVal)
+        xs, ys, zs = graph(rValcopy)
         line.set_data_3d(xs,ys,zs)
         ax.set_xlim(xs.min(), xs.max())
         ax.set_ylim(ys.min(), ys.max())
         ax.set_zlim(zs.min(), zs.max())
-        ax.set_title(f"Lorenz Attractor: R={rVal}")
+        ax.set_title(f"Lorenz Attractor: R={rValcopy}")
         return line
 
+    if(inStr != 'A' and inStr != 'a'):
+        plt.show()
+
+    fig2 = plt.figure()
+
+    ax2 = fig2.add_subplot()
+    x2l = ax2.plot(t, xs, lw=0.5)[0]
+    ax2.set_xlabel("t")
+    ax2.set_ylabel("X - GIF")
+    title2 = f"x(t) [GIF] - R={rVal}"
+    ax2.set_title(title2)
+
+    def updateFrame2(frame):
+        #print("Rval", rVal)
+        rValcopy = frame + 3
+        xs, ys, zs = graph(rValcopy)
+        x2l.set_xdata(t)
+        x2l.set_ydata(xs)
+        ax2.set_xlim(t.min(), t.max())
+        ax2.set_ylim(xs.min(), xs.max())
+        ax2.set_title(f"x(t) [GIF] - R={rValcopy}")
+        return x2l
+    
+    if(inStr != 'A' and inStr != 'a'):
+        plt.show()
+
+    # Plot
+    fig3 = plt.figure()
+
+    ax3 = fig3.add_subplot()
+    x3l = ax3.plot(t, ys, lw=0.5)[0]
+    ax3.set_xlabel("t")
+    ax3.set_ylabel("Y - GIF")
+    title3 = f"y(t) [GIF] - R={rVal}"
+    ax3.set_title(title3)
+
+    def updateFrame3(frame):
+        #print("Rval", rVal)
+        rValcopy = frame + 3
+        xs, ys, zs = graph(rValcopy)
+        x3l.set_xdata(t)
+        x3l.set_ydata(ys)
+        ax3.set_xlim(t.min(), t.max())
+        ax3.set_ylim(ys.min(), ys.max())
+        ax3.set_title(f"y(t) [GIF] - R={rValcopy}")
+        return x3l
+
+    if(inStr != 'A' and inStr != 'a'):
+        plt.show()
+    
+    # Plot
+    fig4 = plt.figure()
+
+    ax4 = fig4.add_subplot()
+    x4l = ax4.plot(t, zs, lw=0.5)[0]
+    ax4.set_xlabel("t")
+    ax4.set_ylabel("Z - GIF")
+    title4 = f"z(t) [GIF] - R={rVal}"
+    ax4.set_title(title4)
+
+    def updateFrame4(frame):
+        #print("Rval", rVal)
+        rValcopy = frame + 3
+        xs, ys, zs = graph(rValcopy)
+        x4l.set_xdata(t)
+        x4l.set_ydata(zs)
+        ax4.set_xlim(t.min(), t.max())
+        ax4.set_ylim(zs.min(), zs.max())
+        ax4.set_title(f"z(t) [GIF] - R={rValcopy}")
+        return x4l
 
     if(inStr == 'A' or inStr == 'a'):
         ani = animation.FuncAnimation(fig=fig, func=updateFrame, frames=26, interval=250 )
-
+        ani2 = animation.FuncAnimation(fig=fig2, func=updateFrame2, frames=26, interval=250 )
+        ani3 = animation.FuncAnimation(fig=fig3, func=updateFrame3, frames=26, interval=250 )
+        ani4 = animation.FuncAnimation(fig=fig4, func=updateFrame4, frames=26, interval=250 )
     plt.show()
-
-    if(inStr != 'A' and inStr != 'a'):
-        fig = plt.figure()
-
-        plt.plot(t, xs, lw=0.5)
-        plt.xlabel("t")
-        plt.ylabel("X - GIF")
-        title = f"x(t) [GIF] - r: {rVal}"
-        plt.title(title)
-
-        plt.show()
-
-        # Plot
-        fig = plt.figure()
-
-        plt.plot(t, ys, lw=0.5)
-        plt.xlabel("t")
-        plt.ylabel("Y - GIF")
-        title = f"y(t) [GIF] - r: {rVal}"
-        plt.title(title)
-
-        plt.show()
-
-        # Plot
-        fig = plt.figure()
-
-        plt.plot(t, zs, lw=0.5)
-        plt.xlabel("t")
-        plt.ylabel("Z - GIF")
-        title = f"z(t) [GIF] - r: {rVal}"
-        plt.title(title)
-
-        plt.show()
 
     main()
     
