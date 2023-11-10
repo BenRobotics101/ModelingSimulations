@@ -56,7 +56,11 @@ def main():
         exit()
     # Plot
     fig = plt.figure()
-    ax = fig.add_subplot(projection='3d')
+    try:
+        ax = fig.add_subplot(projection='3d')
+    except:
+        print("Warning... your version of Matplotlib is out of date. Please try to update it.")
+        ax = fig.gca(projection='3d')
     xs, ys, zs = graph(rVal)
     line = ax.plot(xs, ys, zs, lw=0.5)[0]
     ax.set_xlabel("X Axis")
