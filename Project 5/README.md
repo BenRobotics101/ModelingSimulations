@@ -12,7 +12,7 @@
 **File Directory:**
 
 - Project 4:
-	- Flowchart.png 	// Flowchart image
-	- Project5.docx 	// Documentation
-	- lorenz.py			// Code
-	- README.md			// ReadMe file
+	- Flowchart.png 					// Flowchart image
+	- SelfOrganizedCriticality.docx 	// Documentation
+	- lorenz.py							// Code
+	- README.md							// ReadMe file
