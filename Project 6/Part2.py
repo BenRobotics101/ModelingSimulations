@@ -21,7 +21,7 @@ def model_2_deq(y, x):
 
 def model_2_ans(x):
     """
-    Second Order Power Series solution near x = 0 of the differential equation:
+    Power Series solution near x = 0 of the differential equation:
     y'' = (2*x)y' - 2y
     """
     a = 1
