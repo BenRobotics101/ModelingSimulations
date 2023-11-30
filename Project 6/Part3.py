@@ -16,7 +16,6 @@
 
 import numpy as np
 from scipy.integrate import odeint
-from scipy.optimize import fsolve
 import matplotlib.pyplot as plt
 import math
 
