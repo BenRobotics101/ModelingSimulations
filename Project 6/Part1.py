@@ -12,7 +12,7 @@ def model_1a_deq(y, x):
 
 def model_1a_ans(x):
     """
-    Second Order Taylor Polynomial solution near x = 0 of the differential equation:
+    Taylor Polynomial solution near x = 0 of the differential equation:
     y'' = (2*x)y' - 2y
     """
     return 1 - x - (1/3) * x * x * x - (1/12) * x * x * x * x
@@ -27,7 +27,7 @@ def model_1b_deq(y, x):
 
 def model_1b_ans(x):
     """
-    Second Order Taylor Polynomial solution near x = 3 of the differential equation:
+    Taylor Polynomial solution near x = 3 of the differential equation:
     y'' = (x-2)y' - 2y
     """
     return 6 + (x-3) - 11/2*(x-3)**2
@@ -62,12 +62,12 @@ taylor_1b = model_1b_ans(x_1b)
 figure, axis = plt.subplots() 
 
 axis.plot(x_1a, y_regular_1a, label = "Real Solution", color = "green")
-axis.plot(x_1a, taylor_1a, label = "Second Order Taylor Polynomial", color = "red")
+axis.plot(x_1a, taylor_1a, label = "Taylor Polynomial", color = "red")
 axis.set_xlabel('x')
 axis.set_ylabel('y')
 
 axis.plot(3.5, -29.296875, 'bo')
-axis.text(3.5 * 0.7, -29.296875 * (0.95) , "y(-3.5) = -29.296875", fontsize=12)
+axis.text(3.5 * 0.7, -29.296875 * (0.95) , "y(3.5) = -29.296875", fontsize=12)
 
 axis.legend()
 axis.set_xlim(0, 4)
@@ -79,7 +79,7 @@ figure2, axis2 = plt.subplots()
 
 axis2.plot(x_1b+3, y_regular_1b, label = "Real Solution", color = "green")
 axis2.plot(x_adjust_1b-3, y_regular2_1b, color = "green")
-axis2.plot(x_1b, taylor_1b, label = "Second Order Taylor Polynomial", color = "red")
+axis2.plot(x_1b, taylor_1b, label = "Taylor Polynomial", color = "red")
 axis2.set_xlabel('x')
 axis2.set_ylabel('y')
 

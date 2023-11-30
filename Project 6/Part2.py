@@ -22,7 +22,7 @@ def model_2_ans(x):
     return out
 
 
-####### PART 1 A
+####### PART 2
 
 x_1a = np.linspace(0, 5, 100)
 y0_1a = [1, -1]
@@ -31,14 +31,11 @@ y_regular_1a, y_prime_1a = odeint(model_2_deq, y0_1a, x_1a).T
 
 taylor_1a = model_2_ans(x_1a)
 
-######## PART 1 B
-
-
 
 figure, axis = plt.subplots() 
 
 axis.plot(x_1a, y_regular_1a, label = "Real Solution", color = "green")
-axis.plot(x_1a, taylor_1a, label = "Second Order Taylor Polynomial", color = "red")
+axis.plot(x_1a, taylor_1a, label = "Taylor Polynomial", color = "red")
 axis.set_xlabel('x')
 axis.set_ylabel('y')
 
