@@ -1,3 +1,15 @@
+###############
+# Part 1 - Taylor Polynomials Project 6
+# Benjamin Carter and Trevor Pope
+# 11/29/2023
+# 
+# This program computes the solution to two different differential equations and then
+# graphs the result. It also graphs a Taylor polynomial to allow for comparison between the two.
+#
+############## 
+
+
+
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.integrate import odeint
@@ -58,6 +70,7 @@ y_regular2_1b, y_prime2_1b = odeint(model_1b_deq, y0_1b, x_adjust_1b).T
 
 taylor_1b = model_1b_ans(x_1b)
 
+# Graph the plots
 
 figure, axis = plt.subplots() 
 
@@ -73,7 +86,6 @@ axis.legend()
 axis.set_xlim(0, 4)
 axis.set_ylim(-40, 20)
 axis.set_title('Taylor Polynomial vs. Real Solution - Part 1A')
-
 
 figure2, axis2 = plt.subplots() 
 
