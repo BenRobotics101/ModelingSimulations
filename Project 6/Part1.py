@@ -11,6 +11,10 @@ def model_1a_deq(y, x):
     return [y[1], 2 * x * y[1] - x * x * y[0]]
 
 def model_1a_ans(x):
+    """
+    Second Order Taylor Polynomial solution near x = 0 of the differential equation:
+    y'' = (2*x)y' - 2y
+    """
     return 1 - x - (1/3) * x * x * x - (1/12) * x * x * x * x
 
 def model_1b_deq(y, x):
