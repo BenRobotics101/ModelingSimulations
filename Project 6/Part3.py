@@ -1,7 +1,8 @@
-# CST-305: Principles of Modeling and Simulation
-# Project 1: Visualize ODE with SciPy
-# Professor Ricardo Citro
-# By: Trevor Pope
+###############
+# Part 3 - Taylor Polynomials Project 6
+# Benjamin Carter and Trevor Pope
+# 11/29/2023
+# 
 
 # This program graphs the solution to an ODE that we chose. This ODE represents a webserver that has requests sent into the webserver
 # which are then completed by the webserver's "workers". To demonstrate a real webserver, we used a sin function that would demonstrate
@@ -10,6 +11,8 @@
 # differential equation (dr/dt) / (dp/dt) = dw/dt where dr/dt is the rate of change of the number of requests sent in per second, dp/dt is
 # the rate of change of the number of requests completed per second, and dw/dt is the rate of change of the number of resources needed at that
 # given second.
+
+################
 
 import numpy as np
 from scipy.integrate import odeint

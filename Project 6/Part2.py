@@ -1,8 +1,17 @@
+###############
+# Part 2 - Taylor Polynomials Project 6
+# Benjamin Carter and Trevor Pope
+# 11/29/2023
+# 
+# This program computes the solution to two different differential equations and then
+# graphs the result. It also graphs a Taylor polynomial to allow for comparison between the two.
+#
+############## 
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.integrate import odeint
 
-
+# Define Functions
 def model_2_deq(y, x):
     """
     Matrix Method to solve for the actual solution to the differential equation:
@@ -31,6 +40,7 @@ y_regular_1a, y_prime_1a = odeint(model_2_deq, y0_1a, x_1a).T
 
 taylor_1a = model_2_ans(x_1a)
 
+# Graph
 
 figure, axis = plt.subplots() 
 
