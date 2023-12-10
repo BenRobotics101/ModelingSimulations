@@ -51,5 +51,6 @@ labels[4] = {"y":"Number In Queue", "x":"Arrival Time"}
 for axis in enumerate(ax):
     axis[1].set_xlabel(labels[axis[0]]["x"])
     axis[1].set_ylabel(labels[axis[0]]["y"])
+    axis[1].legend()
 
 plt.show()
