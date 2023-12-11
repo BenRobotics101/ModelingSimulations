@@ -48,20 +48,25 @@ def model_1b_ans(x):
 h = 1
 u = 2
 
+# Function to calculate the utilization value.
 def funcUtilization(xval):
     return (h * xval) / (u * xval)
 
+# Function to calculate the throughput of jobs.
 def throughput(xval):
     return u * xval
 
+# Function to calculate the jobs in the system.
 def numSys(xval):
     return h * xval / xval * ( 1 / (u - h))
 
+# Function to calculate the time that the jobs are in the system.
 def timeSys(xval):
     return (1 / xval) * (1 / (u - h))
 
 
 
+# Graph the plots
 ax = []
 labels = []
 for x in range(4):

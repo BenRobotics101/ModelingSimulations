@@ -15,7 +15,7 @@ import matplotlib.pyplot as plt
 from scipy.integrate import odeint
 
 
-
+# This is the data calculated in our excel graph.
 arrival = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
 serviceDur = [2.22, 1.76, 2.13, 0.14, 0.76, 0.70, 0.47, 0.22, 0.18, 2.41, 0.41, 0.46, 1.37, 0.27, 0.27]
 serviceStartTime = [1, 3.22, 4.98, 7.11, 7.25, 8.01, 8.71, 9.18, 9.4, 10, 12.41, 12.82, 13.28, 14.65, 15]
