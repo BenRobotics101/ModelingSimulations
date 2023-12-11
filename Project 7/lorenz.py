@@ -1,3 +1,11 @@
+################
+#
+#  Lorenz Attractor
+#  By Benjamin Carter and Trevor Pope
+#  12/10/2023
+#  
+#  This program calculates the Lorenz curves with the ability for a user to select an r value.
+################
 
 import numpy as np
 import matplotlib.pyplot as plt

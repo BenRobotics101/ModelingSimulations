@@ -1,10 +1,9 @@
 ###############
-# Part 1 - Taylor Polynomials Project 6
+# Part 2 Question 1
 # Benjamin Carter and Trevor Pope
-# 11/29/2023
+# 12/9/2023
 # 
-# This program computes the solution to two different differential equations and then
-# graphs the result. It also graphs a Taylor polynomial to allow for comparison between the two.
+# This program graphs the solutions for the queueing model for question 1.
 #
 ############## 
 

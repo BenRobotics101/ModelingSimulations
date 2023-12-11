@@ -13,7 +13,7 @@
 
 - Project 4:
 	- lorenzFlowchart.png 						// Flowchart image for Part 1
-	- lorenz.py									// Code for Part 
+	- lorenz.py									// Code for Part 1
 	- Part2-1Flowchart.jpg						// Flowchart image for Part 2.1
 	- Question1Graphs.py						// Code for Part 2.1
 	- Part2-3Flowchart.jpg						// Flowchart image for Part 2.3

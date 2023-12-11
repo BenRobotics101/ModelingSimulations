@@ -1,48 +1,15 @@
 ###############
-# Part 1 - Taylor Polynomials Project 6
+# Part 2 Question 3
 # Benjamin Carter and Trevor Pope
-# 11/29/2023
+# 12/9/2023
 # 
-# This program computes the solution to two different differential equations and then
-# graphs the result. It also graphs a Taylor polynomial to allow for comparison between the two.
+# This program graphs how changes in k affect the rest of the parameters in queuing theory.
 #
 ############## 
 
 
-
 import numpy as np
 import matplotlib.pyplot as plt
-from scipy.integrate import odeint
-
-
-def model_1a_deq(y, x):
-    """
-    Matrix Method to solve for the actual solution to the differential equation:
-    y'' = (2*x)y' - 2y
-    """
-    return [y[1], 2 * x * y[1] - x * x * y[0]]
-
-def model_1a_ans(x):
-    """
-    Taylor Polynomial solution near x = 0 of the differential equation:
-    y'' = (2*x)y' - 2y
-    """
-    return 1 - x - (1/3) * x * x * x - (1/12) * x * x * x * x
-
-def model_1b_deq(y, x):
-    """
-    Matrix Method to solve for the actual solution to the differential equation:
-    y'' = (x-2)y' - 2y
-    """
-    y1, y2 = y
-    return [y2, (x-2) * y2 - 2 * y1]
-
-def model_1b_ans(x):
-    """
-    Taylor Polynomial solution near x = 3 of the differential equation:
-    y'' = (x-2)y' - 2y
-    """
-    return 6 + (x-3) - 11/2*(x-3)**2
 
 
 h = 1
