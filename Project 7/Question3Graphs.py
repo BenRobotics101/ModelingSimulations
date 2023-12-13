@@ -12,6 +12,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
+import time
+startTime = time.time()
+
 h = 1
 u = 2
 
@@ -59,5 +62,10 @@ for axis in enumerate(ax):
     axis[1].set_ylabel(labels[axis[0]]["y"])
     axis[1].legend()
     axis[1].title.set_text(labels[axis[0]]["title"])
+
+
+endTime = time.time()
+timeLength = int((endTime - startTime) * 1000)
+print(f"Calculations took {timeLength / 1000} seconds to run.")
 
 plt.show()

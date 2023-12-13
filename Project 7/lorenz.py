@@ -12,6 +12,7 @@ import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 # This import registers the 3D projection, but is otherwise unused.
 from mpl_toolkits.mplot3d import Axes3D  # noqa: F401 unused import
+import time
 
 num_steps = 10000
 rVal = 3
@@ -69,7 +70,17 @@ def main():
     except:
         print("Warning... your version of Matplotlib is out of date. Please try to update it.")
         ax = fig.gca(projection='3d')
+    
+
+
+    startTime = time.time()
     xs, ys, zs = graph(rVal)
+    endTime = time.time()
+
+    timeLength = int((endTime - startTime) * 1000)
+
+    print(f"Calculations took {timeLength / 1000} seconds to run.")
+    
     line = ax.plot(xs, ys, zs, lw=0.5)[0]
     ax.set_xlabel("X Axis")
     ax.set_ylabel("Y Axis")

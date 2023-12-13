@@ -13,6 +13,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.integrate import odeint
 
+import time
+startTime = time.time()
+
 
 # This is the data calculated in our excel graph.
 arrival = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
@@ -51,5 +54,12 @@ for axis in enumerate(ax):
     axis[1].set_xlabel(labels[axis[0]]["x"])
     axis[1].set_ylabel(labels[axis[0]]["y"])
     axis[1].legend()
+    axis[1].title.set_text(f"{labels[axis[0]]['y']} vs {labels[axis[0]]['x']}")
+
+endTime = time.time()
+
+timeLength = int((endTime - startTime) * 1000)
+
+print(f"Calculations took {timeLength / 1000} seconds to run.")
 
 plt.show()
