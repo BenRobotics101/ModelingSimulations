@@ -90,7 +90,15 @@ def main():
     def updateFrame(frame):
         rValcopy = frame + 3
         #print("Rval", rVal)
+        
+        startTime = time.time()
         xs, ys, zs = graph(rValcopy)
+        endTime = time.time()
+
+        timeLength = int((endTime - startTime) * 1000)
+
+        print(f"Calculations took {timeLength / 1000} seconds to run.")
+
         line.set_data_3d(xs,ys,zs)
         ax.set_xlim(xs.min(), xs.max())
         ax.set_ylim(ys.min(), ys.max())
