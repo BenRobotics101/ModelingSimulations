@@ -1,3 +1,14 @@
+###############
+# Part 2
+# Benjamin Carter and Trevor Pope
+# 12/16/2023
+# 
+# This program computes the area of an experiment done of downloading files from the internet. 
+# It finds the area of the rectangles given and displays a graph.
+#
+############## 
+
+
 import matplotlib.pyplot as plt
 from matplotlib.patches import Rectangle, Patch
 import numpy as np

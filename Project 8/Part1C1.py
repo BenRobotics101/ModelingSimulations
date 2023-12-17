@@ -1,9 +1,9 @@
 ###############
-# Part C Question 1
+# Part 1 Question C.1
 # Benjamin Carter and Trevor Pope
 # 12/16/2023
 # 
-# This program graphs 
+# This program graphs the integral of the natural log of x from 1 to e. It uses Riemann sums to do this.
 #
 ############## 
 

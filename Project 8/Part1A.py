@@ -1,3 +1,11 @@
+###############
+# Part 1 Question A
+# Benjamin Carter and Trevor Pope
+# 12/16/2023
+# 
+# This program computes the Left Handed, Right Handed, and Midpoint sums. It then graphs them out.
+#
+############## 
 
 import math
 import matplotlib.pyplot as plt
