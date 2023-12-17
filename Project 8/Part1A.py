@@ -47,13 +47,6 @@ def calculateIntegral_MID(function, start, end, subdivisions):
 
     return area
 
-startTime = time.time()
-
-a = -np.pi
-b = np.pi
-
-n = 4
-
 def firstEquation(xValue):
     yValue = np.sin(xValue) + 1
     return yValue
@@ -66,6 +59,12 @@ def x_values_LHS(start, end, subdivisions):
         xValues.append(i)
         i += interval
     return np.array(xValues)
+
+startTime = time.time()
+
+a = -np.pi
+b = np.pi
+n = 4
 
 print("Left Hand Sum: ", calculateIntegral_LHS(firstEquation, a, b, n))
 print("Right Hand Sum: ", calculateIntegral_RHS(firstEquation, a, b, n))

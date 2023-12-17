@@ -1,4 +1,4 @@
-# README
+io# README
 # By: Trevor Pope and Ben Carter
 
 **Install & Run the program:**
@@ -17,7 +17,7 @@ https://codingcando.com/fileShare/file?code=96LMHVY6AX
 **File Directory:**
 
 - Project 8:
-	- Part1A.py         						// Flowchart image for Part 1 A
+	- Part1A.py         						// Program for Part 1 Question A
     - Part1C1.py                                // Program for Part 1 Question C.1
     - Part2.py                                  // Program for Part 2 Question 2
 	- README.md									// README file
