@@ -91,7 +91,11 @@ for i in range(4):
             fill=True,
             lw=1))
 for i in range(4):
-    ax[2].add_patch(Rectangle((rectangleX[i], (firstEquation(rectangleX[i + 1]) + firstEquation(rectangleX[i])) / 2), rectangleX[i + 1] - rectangleX[i], -(firstEquation(rectangleX[i + 1]) + firstEquation(rectangleX[i])) / 2,
+    startX = rectangleX[i]
+    width = rectangleX[i + 1] - rectangleX[i]
+    height = firstEquation(rectangleX[i] + width / 2)
+
+    ax[2].add_patch(Rectangle( (startX, 0.0), width, height, # rectangleX[i + 1] - rectangleX[i], -(firstEquation(rectangleX[i + 1]) + firstEquation(rectangleX[i])) / 2,
             edgecolor = 'black',
             facecolor = (0, 0.6, 0.8, 0.8),
             fill=True,
