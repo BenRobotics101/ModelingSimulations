@@ -2,7 +2,7 @@
 import math
 import matplotlib.pyplot as plt
 import numpy as np
-from matplotlib.patches import Rectangle
+from matplotlib.patches import Rectangle, Patch
 
 
 def calculateIntegral_LHS(function, start, end, subdivisions):
@@ -71,12 +71,14 @@ rectangleX = x_values_LHS(a, b, n)
 ax = []
 labels = []
 titles = []
+dummyLegendText = []
 for x in range(3):
     figure, axis = plt.subplots() 
     ax.append(axis)
     labels.append({})
     titles.append([])
-    ax[x].plot(xValues, yValues)
+    dummyLegendText.append([])
+    ax[x].plot(xValues, yValues, label="Function f(x)", color = "blue", lw=2)
 
 for i in range(4):  
     ax[0].add_patch(Rectangle((rectangleX[i], firstEquation(rectangleX[i])), rectangleX[i + 1] - rectangleX[i], -firstEquation(rectangleX[i]),
@@ -107,8 +109,13 @@ labels[2] = {"y":"Y-Value", "x":"X-Value"}
 titles[0] = "Left Riemann Sum"
 titles[1] = "Right Riemann Sum"
 titles[2] = "Midpoint Riemann Sum"
+dummyLegendText[0] = Patch(color=(0, 0.6, 0.8, 0.8), label='Left Hand Measurements')
+dummyLegendText[1] = Patch(color=(0, 0.6, 0.8, 0.8), label='Right Hand Measurements')
+dummyLegendText[2] = Patch(color=(0, 0.6, 0.8, 0.8), label='Midpoint Measurements')
 
 for axis in enumerate(ax):
+    h, l = axis[1].get_legend_handles_labels()
+    axis[1].legend(handles=h + [dummyLegendText[axis[0]]])
     axis[1].set_xlabel(labels[axis[0]]["x"])
     axis[1].set_ylabel(labels[axis[0]]["y"])
     axis[1].title.set_text(f"{titles[axis[0]]}")
