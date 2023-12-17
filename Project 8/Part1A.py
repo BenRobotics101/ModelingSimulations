@@ -3,7 +3,7 @@ import math
 import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib.patches import Rectangle, Patch
-
+import time
 
 def calculateIntegral_LHS(function, start, end, subdivisions):
     area = 0
@@ -39,6 +39,7 @@ def calculateIntegral_MID(function, start, end, subdivisions):
 
     return area
 
+startTime = time.time()
 
 a = -np.pi
 b = np.pi
@@ -119,5 +120,9 @@ for axis in enumerate(ax):
     axis[1].set_xlabel(labels[axis[0]]["x"])
     axis[1].set_ylabel(labels[axis[0]]["y"])
     axis[1].title.set_text(f"{titles[axis[0]]}")
+
+endTime = time.time()
+timeLength = int((endTime - startTime) * 1000)
+print(f"Calculations took {timeLength / 1000} seconds to run.")
 
 plt.show()

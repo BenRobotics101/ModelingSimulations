@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 from matplotlib.patches import Rectangle, Patch
 import numpy as np
+import time
 
 def calculateIntegral_LHS(function, start, end, subdivisions):
     area = 0
@@ -116,6 +117,8 @@ heights = [
 
 ]
 
+startTime = time.time()
+
 for x in range(len(heights)):
     newRectangle = {
         "startX" : dataTimeCumulative[x],
@@ -155,4 +158,9 @@ ax.legend(handles=h + [dummyLegendText])
 ax.set_xlabel("Seconds Of Data Transfer")
 ax.set_ylabel("Transfer speed in Mbps")
 ax.title.set_text(f"Transfer speed over time")
+
+endTime = time.time()
+timeLength = int((endTime - startTime) * 1000)
+print(f"Calculations took {timeLength / 1000} seconds to run.")
+
 plt.show()

@@ -10,7 +10,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib.patches import Rectangle, Patch
-
+import time
 
 def calculateIntegral_LHS(function, start, end, subdivisions):
     area = 0
@@ -27,6 +27,8 @@ def calculateIntegral_LHS(function, start, end, subdivisions):
 def equation(xValue):
     yValue = np.log(xValue)
     return yValue
+
+startTime = time.time()
 
 n = 10000
 a = 1
@@ -49,5 +51,10 @@ ax.legend(handles=h + [dummyLegendText])
 ax.set_xlabel("X-Values")
 ax.set_ylabel("V-Values")
 ax.title.set_text("Left Riemann Sum")
+
+endTime = time.time()
+timeLength = int((endTime - startTime) * 1000)
+print(f"Calculations took {timeLength / 1000} seconds to run.")
+
 plt.show()
 
