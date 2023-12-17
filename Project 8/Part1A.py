@@ -60,7 +60,7 @@ def x_values_LHS(start, end, subdivisions):
 
 print("Left Hand Sum: ", calculateIntegral_LHS(firstEquation, a, b, n))
 print("Right Hand Sum: ", calculateIntegral_RHS(firstEquation, a, b, n))
-print("Right Hand Sum: ", calculateIntegral_MID(firstEquation, a, b, n))
+print("Midpoint Hand Sum: ", calculateIntegral_MID(firstEquation, a, b, n))
 print("Trapezoid  Sum: ", (calculateIntegral_RHS(firstEquation, a, b, n) + calculateIntegral_LHS(firstEquation, a, b, n)) / 2.0)
 
 xValues = np.arange(-np.pi, np.pi, np.pi/1000)
