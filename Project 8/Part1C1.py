@@ -9,6 +9,7 @@
 
 import matplotlib.pyplot as plt
 import numpy as np
+from matplotlib.patches import Rectangle, Patch
 
 
 def calculateIntegral_LHS(function, start, end, subdivisions):
@@ -38,8 +39,13 @@ Y = equation(X)
 X_Fill = np.linspace(1, np.e, n, endpoint=True)
 Y_Fill = equation(X_Fill)
 fig, ax = plt.subplots()
-ax.plot(X, Y, color='blue', alpha=1.00)
-ax.fill_between(X_Fill, Y_Fill, 0, color='blue', alpha=.1)
+ax.plot(X, Y, label="Function F(x)", color='blue', alpha=1.00)
+ax.fill_between(X_Fill, Y_Fill, 0, color=(0, 0.6, 0.8, 0.8), alpha=.5)
+
+dummyLegendText = Patch(color=(0, 0.6, 0.8, 0.8), label='Left Hand Measurements')
+h, l = ax.get_legend_handles_labels()
+
+ax.legend(handles=h + [dummyLegendText])
 ax.set_xlabel("X-Values")
 ax.set_ylabel("V-Values")
 ax.title.set_text("Left Riemann Sum")
